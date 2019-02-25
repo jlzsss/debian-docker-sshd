@@ -3,7 +3,7 @@ FROM debian:stretch
 RUN ( apt update ;\
       apt upgrade -y )
 
-RUN ( apt install -y openssh-server vim screen unzip )
+RUN ( apt install -y openssh-server vim screen unzip curl )
 
 RUN ( mkdir /var/run/sshd ;\
       sed -i "/PermitRootLogin/s/#Permit/Permit/" /etc/ssh/sshd_config ;\
